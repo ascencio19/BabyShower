@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Invitación Baby Shower</title>
+
+    <!-- Tipografía amigable para móviles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <style>
+      :root {
+        --bg: #f4fbf6;              /* fondo verde muy claro */
+        --card: #ffffff;            /* tarjeta */
+        --primary: #8ed1a5;         /* verde pastel */
+        --primary-strong: #6bb789;  /* variante para hover */
+        --text: #243427;            /* texto verdoso oscuro */
+        --muted: #5d7863;           /* detalles */
+      }
+
+      * { box-sizing: border-box; }
+      html, body { height: 100%; }
+      body {
+        margin: 0;
+        font-family: 'Quicksand', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      .wrap {
+        min-height: 100dvh;
+        display: grid;
+        place-items: center;
+        padding: 16px;
+      }
+
+      .card {
+        width: 100%;
+        max-width: 440px;            /* óptimo para celular */
+        background: var(--card);
+        border-radius: 24px;
+        box-shadow: 0 8px 28px rgba(0,0,0,.06);
+        padding: 20px 18px 18px;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(142, 209, 165, .2);
+        color: var(--muted);
+        padding: 8px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+
+      .hero {
+        margin: 10px 0 2px;
+        display: grid;
+        place-items: center;
+        font-size: 64px; /* emoji dino grande */
+        line-height: 1;
+      }
+
+      h1 {
+        margin: 6px 0 2px;
+        font-size: 1.6rem;
+        line-height: 1.2;
+        text-align: center;
+      }
+
+      .subtitle {
+        margin: 0 0 12px;
+        text-align: center;
+        color: var(--muted);
+        font-weight: 600;
+      }
+
+      .details {
+        background: linear-gradient(0deg, rgba(142,209,165,.09), rgba(142,209,165,.09));
+        border: 1px dashed rgba(107,183,137,.5);
+        border-radius: 16px;
+        padding: 14px;
+        display: grid;
+        gap: 10px;
+        margin: 14px 0 10px;
+        font-size: 1rem;
+      }
+
+      .row { display: grid; grid-template-columns: 28px 1fr; gap: 10px; align-items: start; }
+      .row .icon { font-size: 20px; line-height: 1; text-align: center; }
+      .row strong { display: block; font-size: .95rem; }
+      .row span { color: var(--muted); font-weight: 600; }
+
+      .cta {
+        display: grid;
+        gap: 10px;
+        margin-top: 8px;
+      }
+
+      .btn {
+        appearance: none;
+        border: none;
+        border-radius: 14px;
+        padding: 14px 16px;
+        font-size: 1.05rem;
+        font-weight: 700;
+        text-align: center;
+        cursor: pointer;
+        transition: transform .06s ease, box-shadow .12s ease, background .2s ease;
+      }
+      .btn:active { transform: translateY(1px); }
+      .btn-primary { background: var(--primary); color: #0f2817; box-shadow: 0 6px 18px rgba(142,209,165,.45); }
+      .btn-primary:hover { background: var(--primary-strong); }
+      .btn-outline { background: #fff; border: 1px solid rgba(107,183,137,.55); color: #2d5a3a; }
+
+      .note {
+        margin-top: 6px;
+        font-size: .9rem;
+        text-align: center;
+        color: var(--muted);
+      }
+
+      footer { text-align: center; margin-top: 12px; font-size: .8rem; color: var(--muted); }
+      a { color: inherit; text-decoration: none; }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <article class="card" aria-label="Invitación a Baby Shower">
+        <span class="badge">🍼 Baby Shower</span>
+        <div class="hero" aria-hidden="true">🦕</div>
+        <h1>¡Acompañanos a celebrar la llegada de bebe<br /><strong>Mateo Leonardo</strong>!</h1>
+        <p class="subtitle">en honor a sus papas <strong>Jessi</strong> y <strong>Lalo</strong></p>
+
+        <section class="details" aria-label="Detalles del evento">
+          <div class="row">
+            <div class="icon">📅</div>
+            <div>
+              <strong>Fecha</strong>
+              <span>Sábado 13 de septiembre de 2025</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="icon">⏰</div>
+            <div>
+              <strong>Hora</strong>
+              <span>4:10 p.m.</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="icon">📍</div>
+            <div>
+              <strong>Lugar</strong>
+              <span>"Salon KALO terraza de eventos"</span>
+            </div>
+          </div>
+        </section>
+
+        <div class="cta">
+          <a class="btn btn-primary" href="https://wa.me/524773831731?text=Confirmo%20mi%20asistencia%20al%20Baby%20Shower%20🦕" target="_blank" rel="noopener">Confirmar por WhatsApp</a>
+          <a class="btn btn-outline" 
+   href="https://www.google.com/maps/search/?api=1&query=Calle+Parral+Ote.+2503,+Mirador+de+Arbide+37426,+León+de+los+Aldama,+GTO" 
+   target="_blank" 
+   rel="noopener">
+   Ver ubicación en Google Maps
+</a>
+        </div>
+
+        <div id="dino-confetti"></div>
+        <footer>Si no puedes asistir, háznoslo saber. ¡Te esperamos!</footer>
+      </article>
+    </main>
+  </body>
+</html>
+
+/* =========================
+   Baby Shower Dinosaurio — Estilos móviles con fondo
+   ========================= */
+:root {
+  --bg: #f4fbf6;              /* fondo verde muy claro */
+  --card: #ffffff;            /* tarjeta */
+  --primary: #8ed1a5;         /* verde pastel */
+  --primary-strong: #6bb789;  /* variante para hover */
+  --text: #243427;            /* texto verdoso oscuro */
+  --muted: #5d7863;           /* detalles */
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: 'Quicksand', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background-color: var(--bg);
+  background-image: url("Dino3.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: contain;  /* dinos siempre visibles abajo */
+  color: var(--text);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wrap {
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+}
+
+.card {
+  width: 100%;
+  max-width: 440px;            /* óptimo para celular */
+  background: var(--card);
+  border-radius: 24px;
+  box-shadow: 0 8px 28px rgba(0,0,0,.06);
+  padding: 20px 18px 140px; /* extra espacio para que se vean los dinos */
+  position: relative;
+  overflow: hidden;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(142, 209, 165, .2);
+  color: var(--muted);
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.hero {
+  margin: 10px 0 2px;
+  display: grid;
+  place-items: center;
+  font-size: 64px; /* emoji dino grande */
+  line-height: 1;
+}
+
+h1 {
+  margin: 6px 0 2px;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.subtitle {
+  margin: 0 0 12px;
+  text-align: center;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.details {
+  background: linear-gradient(0deg, rgba(142,209,165,.09), rgba(142,209,165,.09));
+  border: 1px dashed rgba(107,183,137,.5);
+  border-radius: 16px;
+  padding: 14px;
+  display: grid;
+  gap: 10px;
+  margin: 14px 0 10px;
+  font-size: 1rem;
+}
+
+.row { display: grid; grid-template-columns: 28px 1fr; gap: 10px; align-items: start; }
+.row .icon { font-size: 20px; line-height: 1; text-align: center; }
+.row strong { display: block; font-size: .95rem; }
+.row span { color: var(--muted); font-weight: 600; }
+
+.cta {
+  display: grid;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.btn {
+  appearance: none;
+  border: none;
+  border-radius: 14px;
+  padding: 14px 16px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  transition: transform .06s ease, box-shadow .12s ease, background .2s ease;
+}
+.btn:active { transform: translateY(1px); }
+.btn-primary { background: var(--primary); color: #0f2817; box-shadow: 0 6px 18px rgba(142,209,165,.45); }
+.btn-primary:hover { background: var(--primary-strong); }
+.btn-outline { background: #fff; border: 1px solid rgba(107,183,137,.55); color: #2d5a3a; }
+
+.note {
+  margin-top: 6px;
+  font-size: .9rem;
+  text-align: center;
+  color: var(--muted);
+}
+
+footer { text-align: center; margin-top: 12px; font-size: .8rem; color: var(--muted); }
+a { color: inherit; text-decoration: none; }
+
+#dino-confetti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* que no bloquee clicks */
+  overflow: hidden;
+  z-index: 9999; /* encima de todo */
+}
+
+.dino {
+  position: absolute;
+  top: -50px;
+  font-size: 2rem; /* tamaño del dino */
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0.8;
+  }
+}
+
+
+$(document).ready(function () {
+  var envelope = $("#envelope");
+  var btn_open = $("#open");
+  var btn_reset = $("#reset");
+
+  function open() {
+    envelope.addClass("open").removeClass("close");
+  }
+  function close() {
+    envelope.addClass("close").removeClass("open");
+  }
+
+  btn_open.click(open);
+  btn_reset.click(close);
+
+  // Navegación
+  $(".nav-btn").click(function () {
+    var target = $(this).data("target");
+    $(".view").removeClass("active");
+    $(".menu").removeClass("active");
+    $("#" + target).addClass("active");
+  });
+});
+
+$(".nav-btn").click(function () {
+  var target = $(this).data("target");
+  $(".view").removeClass("active");
+  $(".menu").removeClass("active");
+  $("#" + target).addClass("active");
+
+  // Si se sale de la carta, cerrar el sobre
+  if (target !== "carta") {
+    envelope.addClass("close").removeClass("open");
+  }
+});
+
+// 💭 Caja de deseos con almacenamiento local
+const deseoInput = document.getElementById("deseoInput");
+const listaDeseos = document.getElementById("listaDeseos");
+const agregarDeseo = document.getElementById("agregarDeseo");
+
+// Cargar deseos guardados
+window.addEventListener("DOMContentLoaded", () => {
+  const deseosGuardados = JSON.parse(localStorage.getItem("misDeseos")) || [];
+  deseosGuardados.forEach((deseo) => agregarElementoDeseo(deseo));
+});
+
+agregarDeseo.addEventListener("click", () => {
+  const texto = deseoInput.value.trim();
+  if (texto !== "") {
+    agregarElementoDeseo(texto);
+    guardarDeseo(texto);
+    deseoInput.value = "";
+  }
+});
+
+function agregarElementoDeseo(texto) {
+  const li = document.createElement("li");
+  li.style.display = "flex";
+  li.style.justifyContent = "space-between";
+  li.style.alignItems = "center";
+  li.style.padding = "8px";
+  li.style.backgroundColor = "#fff0f0";
+  li.style.margin = "5px auto";
+  li.style.border = "1px solid #c20000";
+  li.style.borderRadius = "10px";
+  li.style.maxWidth = "70%";
+
+  const span = document.createElement("span");
+  span.textContent = "🌟 " + texto;
+  span.style.flex = "1";
+
+  const btnEliminar = document.createElement("button");
+  btnEliminar.textContent = "❌";
+  btnEliminar.style.border = "none";
+  btnEliminar.style.background = "transparent";
+  btnEliminar.style.color = "#c20000";
+  btnEliminar.style.fontSize = "1.2rem";
+  btnEliminar.style.cursor = "pointer";
+
+  btnEliminar.addEventListener("click", () => {
+    li.remove();
+    eliminarDeseo(texto);
+  });
+
+  li.appendChild(span);
+  li.appendChild(btnEliminar);
+  listaDeseos.appendChild(li);
+}
+
+function guardarDeseo(texto) {
+  const deseos = JSON.parse(localStorage.getItem("misDeseos")) || [];
+  deseos.push(texto);
+  localStorage.setItem("misDeseos", JSON.stringify(deseos));
+}
+
+function eliminarDeseo(texto) {
+  let deseos = JSON.parse(localStorage.getItem("misDeseos")) || [];
+  deseos = deseos.filter((d) => d !== texto);
+  localStorage.setItem("misDeseos", JSON.stringify(deseos));
+}
+
+// 🖼️ Lightbox para galería
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightboxImg");
+const cerrarLightbox = document.getElementById("cerrarLightbox");
+
+document.querySelectorAll(".gallery img").forEach(img => {
+  img.addEventListener("click", () => {
+    lightboxImg.src = img.src;
+    lightbox.style.display = "flex";
+  });
+});
+
+cerrarLightbox.addEventListener("click", () => {
+  lightbox.style.display = "none";
+  lightboxImg.src = "";
+});
+
+function cambiarCancion(ruta, titulo) {
+  const audio = document.getElementById("audioPlayer");
+  const trackTitle = document.getElementById("trackTitle");
+
+  audio.pause();          // Pausa la canción actual
+  audio.src = ruta;       // Cambia la ruta
+  audio.load();           // Recarga el audio
+  audio.play();           // Reproduce
+  trackTitle.textContent = titulo; // Actualiza título
+}
+
+function lanzarDinos() {
+  const dinoEmojis = ["🦕", "🦖", "🦎"]; // dinos que caerán
+  const confettiContainer = document.getElementById("dino-confetti");
+
+  for (let i = 0; i < 25; i++) {  // cantidad de dinos que caerán
+    const dino = document.createElement("div");
+    dino.classList.add("dino");
+    dino.textContent = dinoEmojis[Math.floor(Math.random() * dinoEmojis.length)];
+
+    // posición random en X
+    dino.style.left = Math.random() * 100 + "vw";
+    // duración random de caída
+    dino.style.animationDuration = 3 + Math.random() * 2 + "s";
+
+    confettiContainer.appendChild(dino);
+
+    // eliminar después de animación
+    setTimeout(() => {
+      dino.remove();
+    }, 6000);
+  }
+}
+
+// Lanzar dinos automáticamente al cargar la página
+window.addEventListener("load", lanzarDinos);
